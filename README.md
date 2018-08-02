@@ -2,14 +2,24 @@
 
 This is a simple grunt setup which has been support scss to css minified and multiple js to a chunk of js.
 
-How to use :
 
-- install required files
+### Installation
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ cd core-html-project
+$ npm install
+$ grunt
 ```
-npm install
+
+Voila! You are ready to jump to the project and feel free to edit the /src files
+
+
+If you want to copy dependencies from /src to /build, easily:
+
+```sh
+$ grunt copy
 ```
-- run grunt file 
-```
-grunt
-```
-- edit files in folder `src`
+
+**It's Free! Do Your Best and Feel Free to Edita!**
