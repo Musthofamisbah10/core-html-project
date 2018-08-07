@@ -19,11 +19,13 @@
         // * Don't forget to use proper function name to describes your function
         // ======================================================================
         select2: function() {
-            // $(document).ready(function() {
-            //     $("select").select2();
-            // });
+            $(document).ready(function() {
+                $("select").select2();
+            });
         },
-
-    };
+    }
+    $(document).ready(function () {
+        app.init($);
+    });
 
 });
