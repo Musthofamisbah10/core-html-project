@@ -45,22 +45,41 @@ module.exports = function(grunt){
       },
     },
     watch: {
+      options: {
+        livereload: true,
+      },
       scss: {
-        files: ['src/scss/*.scss'], 
-        tasks: ['sass']
+        files: ['src/scss/*.scss'],
+        tasks: ['sass'],
+        options: { livereload: true },
       },
       uglify: {
         files: ['src/js/*.js'],
-        tasks: ['uglify']
+        tasks: ['uglify'],
+        options: { livereload: true },
       },
       codekit: {
         files: ['**/*.kit'],
-        tasks: ['codekit']
+        tasks: ['codekit'],
+        options: { livereload: true },
       },
-    }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          base: 'build/.',
+          hostname: '0.0.0.0',
+          protocol: 'http',
+          livereload: true,
+          open: true,
+        }
+      }
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['watch']);
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.registerTask('default', ['connect','watch']);
   require('load-grunt-tasks')(grunt);
 }
