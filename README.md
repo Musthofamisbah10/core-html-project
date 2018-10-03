@@ -16,10 +16,6 @@ $ grunt
 Voila! You are ready to jump to the project and feel free to edit the /src files
 
 
-If you want to copy dependencies from /src to /build, easily:
-
-```sh
-$ grunt copy
-```
+[UPDATE] Copy your dependencies only in folder build/vendor, no need to copy inside src folder. 
 
 **It's Free! Do Your Best and Feel Free to Edita!**
